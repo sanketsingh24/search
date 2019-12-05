@@ -21,6 +21,7 @@ paragraph.indexPara = function(req, res) {
         })  
     });
     res.render('search', { title: 'TapSearch' });
+    doc = {}, paras = {};
 }
 
 paragraph.indexPDF= function(text, res) {
@@ -36,6 +37,7 @@ paragraph.indexPDF= function(text, res) {
             wordIndex[word][index] = (wordIndex[word][index] ===  undefined ? 1 : wordIndex[word][index]+1); 
         })  
     });
+    doc = {}, paras = {};
 }
 
 paragraph.search = function(req, res) {
@@ -45,7 +47,7 @@ paragraph.search = function(req, res) {
         res.render('noans', { statusmessage: res.statusMessage, title: 'Answer not present' });  
         return;
     }
-    
+
     var sorted = Object.keys(wordIndex[keyword]).sort(function (a,b) {
         return wordIndex[keyword][b] - wordIndex[keyword][a]; 
     })
@@ -54,6 +56,7 @@ paragraph.search = function(req, res) {
         sorted[i]++;
     }
     res.render('ans', { sorted: sorted.slice(0,10), title: 'Success!!', keyword });  
+    sorted = {};
 }
 
 paragraph.clear = function(req, res) {

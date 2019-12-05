@@ -75,8 +75,7 @@ router.get('/ans/', function (req,res,next) {
   res.render('ans', { sorted: null, title: 'Answer from router' });  
 })
 
-router.delete('/',function(req, res, next) {
-  
+router.post('/',function(req, res, next) {
   controller.para.clear(req,res);
 });
 
