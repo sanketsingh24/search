@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p><%= statusmessage %> in the document</p>
+    <form action="/search" method="get">
+      <input type="submit" value="Back">
+    </form>
+    <form action="/" method="delete">
+      <input type="submit" value="Reset">
+    </form>
+  </body>
+</html>

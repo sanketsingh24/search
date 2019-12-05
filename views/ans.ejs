@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Here are the top paragraphs in which <%= keyword %> is present:</p>
+    <p>Paragraph no: <%= sorted %></p>
+    <form action="/search" method="get">
+      <input type="submit" value="Back">
+    </form>
+    <form action="/" method="delete">
+      <input type="submit" value="Reset">
+    </form>
+  </body>
+</html>

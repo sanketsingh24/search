@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <p>Type or Paste the document here:</p>
+    <form action="/search" method="post">
+      <label for="doc">Enter Document: </label>
+      <br />
+      <textarea id="doc" rows="5" cols="100" name="doc" placeholder="Type or Paste the Document Here"></textarea>
+      <br />
+      <button type="submit" value="OK">OK</button>
+      <br />
+      <p class="error"><%= status %></p>
+    </form>
+    <p>Or upload the document here:</p>
+    <form action="/fileSearch" method="post" enctype="multipart/form-data">
+      <input type="file" name="document" /> <br />
+      <input type="submit" value="Upload a file"/>
+    </form>
+  </body>
+</html>

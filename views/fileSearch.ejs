@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+  <form action="/ans/" method="post">
+    <label for="key">Enter keyword to search for:</label>
+    <br />
+    <input type="text" id="key" name="keyword" placeholder="Type"></textarea>
+    <br />
+    <input type="submit" value="OK">
+  </form>
+  <form action="/" method="get">
+    <input type="submit" value="Back">
+  </form>
+  <form action="/" method="delete">
+    <input type="submit" value="Reset">
+  </form>
+  </body>
+</html>
