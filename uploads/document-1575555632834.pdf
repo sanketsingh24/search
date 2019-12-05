@@ -1,0 +1,176 @@
+Delivered-To: sanketsingh24@gmail.com
+Received: by 2002:a17:906:7282:0:0:0:0 with SMTP id b2csp543213ejl;
+        Sat, 23 Nov 2019 05:53:40 -0800 (PST)
+X-Google-Smtp-Source: APXvYqyM5t2NJ1swjoKJI7H3B4WA8Cgj6fGLdT39Id76gwpdlfFCWqlOCa9ZRk7SKReZa+xL1qRc
+X-Received: by 2002:aa7:d3da:: with SMTP id o26mr7487767edr.302.1574517220021;
+        Sat, 23 Nov 2019 05:53:40 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1574517220; cv=none;
+        d=google.com; s=arc-20160816;
+        b=rvWWJrikkKYq94i9bs6I3BAOXfAuMi//q4hI5cieXMEo0IVbuybRbh7k3B15Br8vkf
+         ia3449nIUPs3DYjOm7DKw73D1G7p6urJXZCtx0poAtbFKnVdHYdEwA4sS81B/dF3pk94
+         QgRq6eqyzU4ggCt/mctPbk03eRco1W8Yh0NtHA5VcLCfYJnc0ZYH8teqtCeCGtJuCGV2
+         e/3pl6FN9tUu1xxDXW8iNI/oobm6fYwc4f/oFWCL0tNIeSGQYBU92fKg2+OcBnNgy4ND
+         5XxpJ2OU++hz+R7G0/kVAEHHerxQYpR3v2HolQvOjrbR5NL4KHBed0Seh2z5vOj56XHA
+         Biag==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:subject:message-id:to:reply-to:from:date
+         :mime-version:dkim-signature:dkim-signature;
+        bh=W7b+RTSratkJ67zbqI0GYEJ07ayETzV8YkR/iPJeTE8=;
+        b=forcgRL/pyIRvpwx3XnDkKlGxJaPdfBT7JccrJh0hLx4dsBy5TwzTmb5KIezGNrEoe
+         bildKRlAIUphs50ZtAD/7/QHVqckNDRG6pQBu7zPIuE1Ltj5i//HGsLIelw7DENG+fvw
+         ziNvaHR528g2cl78m+ZxOyXYH4pt3No3455hJ6fnR6LrEMRCc3FcncMdKkQ8ixbhdlv0
+         0/lJQ7J0PUU7SzDyJCT9SivPL6MIsncarYo2uQVdhkayp5ujsA6xgu3B9fG295RPM49a
+         VaZFmjhuMcC7TVt9HJ36xQAZO+7b536wjgZNBtw9ooSKncdOy62dYsJJpr0jlYB5Ennm
+         Ublg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@freshteam.com header.s=s1 header.b=dm5yrJbO;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=z3hETQPJ;
+       spf=pass (google.com: domain of bounces+3920407-2044-sanketsingh24=gmail.com@emailparser.freshteam.com designates 167.89.103.32 as permitted sender) smtp.mailfrom="bounces+3920407-2044-sanketsingh24=gmail.com@emailparser.freshteam.com"
+Return-Path: <bounces+3920407-2044-sanketsingh24=gmail.com@emailparser.freshteam.com>
+Received: from o1.email.freshteam.com (o1.email.freshteam.com. [167.89.103.32])
+        by mx.google.com with ESMTPS id 95si877629edq.244.2019.11.23.05.53.39
+        for <sanketsingh24@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Sat, 23 Nov 2019 05:53:39 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+3920407-2044-sanketsingh24=gmail.com@emailparser.freshteam.com designates 167.89.103.32 as permitted sender) client-ip=167.89.103.32;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@freshteam.com header.s=s1 header.b=dm5yrJbO;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=z3hETQPJ;
+       spf=pass (google.com: domain of bounces+3920407-2044-sanketsingh24=gmail.com@emailparser.freshteam.com designates 167.89.103.32 as permitted sender) smtp.mailfrom="bounces+3920407-2044-sanketsingh24=gmail.com@emailparser.freshteam.com"
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+	d=freshteam.com; 
+	h=mime-version:from:reply-to:to:subject:content-type:content-transfer-encoding; 
+	s=s1; bh=W7b+RTSratkJ67zbqI0GYEJ07ayETzV8YkR/iPJeTE8=; b=dm5yrJb
+	O+D888ZL5eNTuclmhVejWabIALNXrIgyFeu7RGc8zb7OrL640UDGjpRC5hidXqXu
+	xOsqPKFCPxlwoNb/Tn9eUk/Wx+pR+TiLOT+LqnmAZ3WYwSbonZD/LeOcOJMbu3eS
+	N1SvpSN+pV31/URKVbzmOV5ndmrhnsTybWG4=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; 
+	d=sendgrid.info; 
+	h=mime-version:from:reply-to:to:subject:content-type:content-transfer-encoding:x-feedback-id; 
+	s=smtpapi; bh=W7b+RTSratkJ67zbqI0GYEJ07ayETzV8YkR/iPJeTE8=; b=z3
+	hETQPJf8iBjMXrAx7U65U2EmZsQ1AvgyvQ/y+7cczTm7Tqe62HV/kwkJq2jzd2Nq
+	yhrHf7RQIbftJiNp2dzdKr3dTQbjFNF1hNTAowZeYhuEbX4ajuktBZz6a8138T8t
+	tCzFgBpV4ceETZUCWPO12HL+DC7BAvX1+YEUbllz4=
+Received: by filter0909p1iad2.sendgrid.net with SMTP id filter0909p1iad2-25807-5DD939E1-14
+        2019-11-23 13:53:37.565810948 +0000 UTC m=+670285.628182151
+Received: from freshteam.com (mail-us1.freshemail.io [34.198.193.174])
+	by ismtpd0091p1mdw1.sendgrid.net (SG) with ESMTP id KI6MvngVQ62Tmw37bOUR6A
+	for <sanketsingh24@gmail.com>; Sat, 23 Nov 2019 13:53:37.493 +0000 (UTC)
+MIME-Version: 1.0
+X-Received: from ec2-52-7-151-201.compute-1.amazonaws.com (EHLO freshteam.com) ([52.7.151.201])
+          by smtpout.freshdesk.com (Freshworks SMTP Server) with ESMTPA ID -659550946.5
+          for <sanketsingh24@gmail.com>;
+          Sat, 23 Nov 2019 13:53:37 +0000 (UTC)
+Date: Sat, 23 Nov 2019 13:53:37 +0000 (UTC)
+From: Sneha Hegde <sneha@tapchief.com>
+Reply-To: sneha@tapchief.com
+To: sanketsingh24@gmail.com
+Message-ID: <5dd939e0b8a3a_6f6c2b25509acfe013362c.jobs-22@tapchief.freshteam.com>
+Subject: TapChief <> Coding Challenge for Tech Internship
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+X-IP-POOL: 
+X-SG-EID: UCdy6/ZMWs+k72mIDmErFS0z94Xzhl+OmEV1cyNFkZtBFgLEkt1YVLuIuT3HXqeDOvIe7LnjQp4W4P
+ pSePv9pdXrDhMj7TAwXMfslhABPcHNki8/cYuIi7qghxQ1qOWYwIJQ042ik/Ws+7b0Rvb7F+QMPOeF
+ Ow2q01pe/d/GD1SONJPGxvwuD7zxfllhQlEOMa77w7CFO8VIlknRoQtYI7oSZfjRCw4/5i+l5c2CLw
+ c=
+X-SG-ID: dXNuuxiaeVPHPf1dZH02eDeWt7MD1AQGpfqo0CMFvfF8EXhH05uqNw0f1jzpjzHap1bP1uXUKkW/PA
+ /4gSiDOlM+A6EV++6bAKSVMRjhDFHDDT97D7pw17Us3s51fW9GKxzbKFOAoBl7Nxqgc68rZgWhkNFb
+ MMrmES0OXQsG7SDN2Ioh5kqzKT1mZeu7qm680ESSVIQfF2eafwhHejABuzthwT551dpc7DhJoc84Rs
+ Cm9G+pM579jnErltLyRkAojtSJcJXBABi4G8A/MsVPLrMzI9jk0YxH+eo9doAXS37rqBlPohmSRkH7
+ JzysC61g
+X-Feedback-ID: 3920407:/yC0H7abDtp6cgjROrmrKtXoSR0Uix5unRACOSUHAgM=:/yC0H7abDtp6cgjROrmrKtXoSR0Uix5unRACOSUHAgM=:SG
+
+<p>Hello Sanket,</p><p><br></p><p>Thank you for showing interest in Softwar=
+e Engineering Internship position. As a next step in the process we would l=
+ike you to take up the below given assignment.=C2=A0</p><p>Please submit th=
+e assignment in next 48 hrs with subject line as <strong>"Internship Progra=
+m - Assignment submission".=C2=A0</strong></p><p>You can reach out to us if=
+ any technical queries on abhijith@tapchief.com</p><p><strong>Coding Challe=
+nge:</strong></p><p dir=3D"ltr">You are to build a simple program called Ta=
+pSearch that achieves these objectives.</p><ol><li dir=3D"ltr"><p dir=3D"lt=
+r">It takes in multiple paragraphs of text, assigns a unique ID To each par=
+agraph and stores the words to paragraph mappings on an inverted index. Thi=
+s is similar to what elasticsearch does. This paragraph can also be referre=
+d to as a =E2=80=98document=E2=80=99</p></li><li dir=3D"ltr"><p dir=3D"ltr"=
+>Given a word to search for, it lists out the top 10 paragraphs in which th=
+e word is present</p></li></ol><p><br></p><p dir=3D"ltr">Few points to cons=
+ider</p><ol><li dir=3D"ltr"><p dir=3D"ltr">Tokenize to words by splitting a=
+t whitespace</p></li><li dir=3D"ltr"><p dir=3D"ltr">Convert all words to lo=
+wercase</p></li><li dir=3D"ltr"><p dir=3D"ltr">Index these words against th=
+e documents they are from</p></li><li dir=3D"ltr"><p dir=3D"ltr">Generate a=
+ unique ID for every document that is index</p></li><li dir=3D"ltr"><p dir=
+=3D"ltr">A paragraph is defined by two newline characters</p></li></ol><p><=
+br></p><p dir=3D"ltr">TapSearch APIs you=E2=80=99ll need to =C2=A0build</p>=
+<ol><li dir=3D"ltr"><p dir=3D"ltr">clear - Clear the index and all indexed =
+documents</p></li><li dir=3D"ltr"><p dir=3D"ltr">index - Index a given docu=
+ment (After having split the input into paragraphs a.k.a document )</p></li=
+><li dir=3D"ltr"><p dir=3D"ltr">Search - Given a word, search for it and re=
+trieve the top 10 paragraphs (Documents) that contain it</p></li></ol><p><b=
+r></p><p dir=3D"ltr">If you successfully create an Inverted Index, Your cod=
+e will be judged primarily on:</p><p dir=3D"ltr">Performance: What we love =
+about Elasticsearch is it=E2=80=99s speed while search for words through an=
+ inverted index.</p><p dir=3D"ltr">Coding style - How good are your abstrac=
+tion and overall architecture. Is your code readable and maintainable? We a=
+t TapChief strongly believe that well-written code requires little to no do=
+cumentation.</p><p dir=3D"ltr">Your code must be hosted on the cloud, pleas=
+e ONLY use Heroku that is available free of cost. It must have a basic fron=
+tend that lets us input text and submit it to be indexed, and another that =
+simple piece of UI that lets us search for top 10 documents given a word.</=
+p><p><br></p><p dir=3D"ltr">What exactly you have to put in for your submis=
+sion.</p><ol><li dir=3D"ltr"><p dir=3D"ltr">Link to Cloud deployment</p></l=
+i><li dir=3D"ltr"><p dir=3D"ltr">Link to the Github Repo</p></li><li dir=3D=
+"ltr"><p dir=3D"ltr">A Readme file in the repo that briefly explains how to=
+ use TapSearch</p></li><li dir=3D"ltr"><p dir=3D"ltr">Your grand Vision. Wh=
+ere would you take this project if you had a tech arsenal at your disposal?=
+</p></li><li dir=3D"ltr"><p dir=3D"ltr">Sample Inputs and Outputs that you =
+have personally tested the program on</p></li></ol><p><br></p><p dir=3D"ltr=
+">If you think this isn=E2=80=99t challenging enough for you, here are two =
+bonus questions to really let you stick out among your peers.</p><p><br></p=
+><p dir=3D"ltr"><strong>Bonus 1</strong></p><p dir=3D"ltr">Add the function=
+ality to upload PDFs and index them. The uploaded PDFs are first parsed int=
+o text and then indexed as a document. Given a word to search, return the t=
+op 10 matches with the ability to download the PDF</p><p><br></p><p dir=3D"=
+ltr"><strong>Bonus 2</strong></p><p dir=3D"ltr">Add the functionality to up=
+load Images and index them after feature extraction. Given an image to sear=
+ch for, your program must return the top 10 images that look similar to the=
+ image I searched for - very similar to Google search by Image.</p><p><br><=
+/p><p dir=3D"ltr">A few general notes</p><ol><li dir=3D"ltr"><p dir=3D"ltr"=
+>Your code must be hosted on the cloud</p></li><li dir=3D"ltr"><p dir=3D"lt=
+r">You will provide instruction to accurately test your app in the Readme</=
+p></li><li dir=3D"ltr"><p dir=3D"ltr">You may use whatever language you wan=
+t to. Only performance and accuracy matters.</p></li></ol><p dir=3D"ltr"><s=
+trong>Sample Input:</strong></p><ol><li dir=3D"ltr"><p dir=3D"ltr">Two docu=
+ments (paragraphs) separated by two new lines (\n\n)</p></li></ol><p dir=3D=
+"ltr">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusm=
+od tempor incididunt ut labore et dolore magna aliqua. Magna ac placerat ve=
+stibulum lectus. Elit duis tristique sollicitudin nibh sit amet commodo. Se=
+nectus et netus et malesuada fames. Fermentum iaculis eu non diam phasellus=
+ vestibulum lorem sed. Dictumst quisque sagittis purus sit amet volutpat co=
+nsequat mauris. Aliquam ut porttitor leo a diam sollicitudin tempor. Consec=
+tetur a erat nam at lectus urna duis convallis. Sed viverra ipsum nunc aliq=
+uet bibendum enim facilisis gravida neque.=C2=A0</p><p><br></p><p dir=3D"lt=
+r">Maecenas volutpat blandit aliquam etiam erat velit scelerisque. Lectus s=
+it amet est placerat in egestas erat imperdiet. Ante in nibh mauris cursus =
+mattis. Tellus rutrum tellus pellentesque eu tincidunt. Euismod quis viverr=
+a nibh cras pulvinar mattis. Proin nibh nisl condimentum id venenatis a. Qu=
+am elementum pulvinar etiam non quam. Arcu dictum varius duis at consectetu=
+r lorem donec. Aliquet porttitor lacus luctus accumsan tortor. Duis ut diam=
+ quam nulla porttitor massa id.</p><ol start=3D"2"><li dir=3D"ltr"><p dir=
+=3D"ltr">Sample search</p><ol><li dir=3D"ltr"><p dir=3D"ltr">Input - lorem<=
+/p></li></ol></li></ol><p dir=3D"ltr">Results: Paragraph 1 and 2 are return=
+ed</p><ol><ol start=3D"2"><li dir=3D"ltr"><p dir=3D"ltr">Input - Maecenas</=
+p></li></ol></ol><p dir=3D"ltr">=C2=A0 =C2=A0 =C2=A0 =C2=A0 Results: Paragr=
+aph 1</p><p><br></p><p dir=3D"ltr"><strong>Please Note</strong></p><p dir=
+=3D"ltr">A preprocessing function is called before the Index function that =
+splits the user submission to index at paragraphs and index each paragraph =
+as a separate document.</p><p dir=3D"ltr"><br></p><p dir=3D"ltr"><span styl=
+e=3D"color: rgb(71, 85, 119);">Regards,</span></p><p dir=3D"ltr"><span styl=
+e=3D"color: rgb(71, 85, 119);">Sneha Hegde</span></p><p dir=3D"ltr"><span s=
+tyle=3D"color: rgb(71, 85, 119);">HR, Team TapChief</span></p><p><br></p>=
+=0D
+=0D
+<span title=3D'freshteamjobuid' style=3D'display: none'>gHFiqB9918eI</span>=
+=0D
+=0D

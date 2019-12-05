@@ -6,7 +6,7 @@ paragraph.indexPara = function(req, res) {
     doc = doc.toLowerCase();
 
     if(doc=="") {
-        res.render('index', { title: 'TapSearch', status:'Please enter a document!' });
+        res.render('index', { title: 'TapSearch', status:'Please enter a document!' , fileStatus:''});
         return;
     }
     var paras = doc.split(/\n\s*\n/g);

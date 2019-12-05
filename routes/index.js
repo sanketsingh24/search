@@ -19,7 +19,7 @@ var storage = multer.diskStorage({
 var upload = multer({ storage: storage })
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'TapSearch', status:'' });
+  res.render('index', { title: 'TapSearch', status:'' , fileStatus:''});
 });
 
 router.post('/search', function(req, res, next) {
@@ -30,8 +30,12 @@ router.post('/fileSearch', upload.single('document'), function(req, res, next) {
   try {
     var file = req.file;
     if(!file) {
-      res.render('index', { title: 'TapSearch' });
+      res.render('index', { title: 'TapSearch', status:'', fileStatus:'No file provided' });
       res.sendStatus(400);
+      return;
+    }
+    if(file.originalname.slice(-4)!=".pdf") {
+      res.render('index', { title: 'TapSearch', status:'', fileStatus:'Please upload a valid file'});
       return;
     }
 
