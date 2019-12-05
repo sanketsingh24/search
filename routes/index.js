@@ -53,6 +53,7 @@ router.post('/fileSearch', upload.single('document'), function(req, res, next) {
           controller.para.indexPDF(text);
           res.render('search', { title: 'TapSearch' });
           rows = {};
+          text="";
       } else if (item.text) {
         (rows[item.y] = rows[item.y] || []).push(item.text);
       }
@@ -75,6 +76,7 @@ router.get('/ans/', function (req,res,next) {
 })
 
 router.delete('/',function(req, res, next) {
+  
   controller.para.clear(req,res);
 });
 
