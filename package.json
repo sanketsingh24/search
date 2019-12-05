@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "node app for TapChief",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js",
+    "debug": "nodemon server.js"
   },
   "repository": {
     "type": "git",
