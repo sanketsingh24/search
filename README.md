@@ -20,5 +20,5 @@ Simple program that achieves these objectives-
 ### Instructions for running
 1. ```git clone``` the repository.
 2. Install dependencies using ```npm install```.
-3. Run the app using ```npm start```. To run in debug mode, run ```npm debug```.
+3. Run the app using ```npm run start```. To run in debug mode, run ```npm run debug```.
 4. Open [```http://127.0.0.1:4000/```](http://127.0.0.1:4000/)
