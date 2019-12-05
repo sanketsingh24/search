@@ -2,10 +2,8 @@
   "name": "tapsearch",
   "version": "1.0.0",
   "description": "node app for TapChief",
-  "private": true,
-  "main": "./bin/www",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
