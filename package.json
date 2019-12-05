@@ -1,10 +1,18 @@
 {
-  "name": "ts3",
-  "version": "0.0.0",
+  "name": "tapsearch",
+  "version": "1.0.0",
+  "description": "node app for TapChief",
   "private": true,
+  "main": "./bin/www",
   "scripts": {
     "start": "node ./bin/www"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanketsingh24/search"
+  },
+  "author": "Sanket Singh",
+  "license": "MIT",
   "dependencies": {
     "debug": "~2.6.9",
     "ejs": "~2.6.1",
